@@ -14,6 +14,7 @@
     "vite": "^4.1.0"
   },
   "devDependencies": {
+    "@raquo/vite-plugin-glob-resolver": "^0.1.0",
     "@raquo/vite-plugin-import-side-effect": "0.2.0"
   }
 }
