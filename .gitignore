@@ -1,0 +1,6 @@
+.bloop/
+.bsp/
+.metals/
+node_modules/
+target/
+*.~undo-tree~
