@@ -15,4 +15,9 @@ lazy val root = project
     },
 
     libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.4.0",
+    libraryDependencies ++= Seq(
+      // build via `stc --includeProject=true`
+      // XXX: This not working. Vite cannot find css file addressed in this module
+      "org.scalablytyped" %%% "poc-vite-scalajs-css" % "0.1.0-SNAPSHOT-7b86ac",
+    ),
   )

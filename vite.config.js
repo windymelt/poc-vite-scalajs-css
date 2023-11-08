@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import scalaJSPlugin from "@scala-js/vite-plugin-scalajs";
-import importSideEffectPlugin from "@raquo/vite-plugin-import-side-effect";
+// import importSideEffectPlugin from "@raquo/vite-plugin-import-side-effect";
 import globResolverPlugin from "@raquo/vite-plugin-glob-resolver";
 
 export default defineConfig({
@@ -12,11 +12,12 @@ export default defineConfig({
                       'target/**'
                   ]
               }),
-              importSideEffectPlugin({
-                  // See https://github.com/raquo/vite-plugin-import-side-effect
-                  defNames: ["importStyle"],
-                  rewriteModuleIds: ['**/*.css', '**/*.less'],
-                  verbose: true
-              }),
+              // XXX:  This plugin overrides importt and break exported vars
+              // importSideEffectPlugin({
+              //     // See https://github.com/raquo/vite-plugin-import-side-effect
+              //     defNames: ["importStyle"],
+              //     rewriteModuleIds: ['**/*.css', '**/*.less'],
+              //     verbose: true
+              // }),
              ],
 });
